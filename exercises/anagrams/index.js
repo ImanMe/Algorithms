@@ -11,7 +11,6 @@
 
 function anagrams(stringA, stringB) {
     return cleanUpString(stringB) === cleanUpString(stringA);
-
 }
 
 cleanUpString = (str) => {
