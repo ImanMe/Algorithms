@@ -14,6 +14,40 @@
 //       ' ### '
 //       '#####'
 
-function pyramid(n) {}
+
+//       '   #   ',
+//       '  ###  ',
+//       ' ##### ',
+//       '#######',
+
+
+function pyramid(n) {
+    const midPoint = Math.floor((2 * n - 1) / 2);
+
+
+    for (let row = 0; row < n; row++) {
+        let level = '';
+
+        for (let column = 0; column < 2 * n - 1; column++) {
+            if (midPoint - row <= column && midPoint + row >= column) {
+                level += '#';
+            }
+            else {
+                level += ' ';
+            }
+        }
+        console.log(level);
+    }
+}
 
 module.exports = pyramid;
+
+// function pyramid(n) {
+
+//     let noOfColumns = 2 * n - 1;
+
+//     for (let i = 0; i < n; i++) {
+//         let str = ' '.repeat((noOfColumns - (2 * i + 1)) / 2) + '#'.repeat(2 * i + 1) + ' '.repeat((noOfColumns - (2 * i + 1)) / 2)
+//         console.log(str);
+//     }
+// }
